@@ -1,0 +1,242 @@
+@charset "UTF-8";
+
+body{
+    background-image: url(file:///D:/SENAC/Hotel/imgs/retangulo%20branco.png);
+    background-repeat: no-repeat;
+    background-color: rgb(224, 224, 224);
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 195%;
+    text-align: center;
+}
+
+address{
+    border-bottom: solid 2px;
+    top: 0px;
+    font-size: 70%;
+    margin-bottom: 1px
+}
+
+span{
+ opacity: 0;
+}
+
+
+/*
+* === IDs ===
+*/
+
+#home{
+background-position: 0px 229px;
+background-size: 4000px 719px;
+}
+
+#galeria{
+background-position: 0px 229px;
+background-size: 4000px 720px;      
+}
+
+#map{
+    background-position: -10px 230px;
+    background-size: 4000px 600px;     
+
+}
+
+#footermap{
+position: relative;
+bottom: -700px
+}
+
+
+/*
+* === Classes ===
+*/
+
+.ulmenu {
+text-align: center;
+display:inline-block;  
+position: relative;
+top: 94px;    
+left: 0px;
+list-style-type: none;
+}
+
+.ulmenu a{         
+text-decoration: none;
+color: black;
+
+}
+
+.ulmenu li a:hover {
+    color: rgb(158, 163, 127)
+}
+
+.ulmenu li{
+    display: inline;
+}
+
+
+
+
+.ulchecagem{
+list-style-type: none
+
+}
+
+.ulchecagem li{
+ display: inline   
+}
+
+.logo img{
+box-sizing: border-box;    
+border: 2px solid transparent;     
+width: 300px;
+height: auto;        
+position: absolute;
+left: 390px;
+top: 93px   ;
+}
+
+.logo img:hover {
+    border-color:  rgb(158, 163, 127);
+    border-style: solid;
+    background-color: rgb(255, 255, 255)
+}
+
+.text{  
+word-wrap: normal;
+width: 500px;
+margin-left: 300px;
+margin-right: 300px;
+padding: 0px;
+margin-top: -40px;
+}
+
+.text-right{    
+position: relative;    
+top: 0%;    
+float: right
+}
+
+.lista-h{      
+list-style-type: none;
+padding: 0;
+display: grid;
+grid-auto-flow: column;
+grid-auto-columns: 1fr;
+}
+
+.lista-h a{       
+text-decoration: none;
+ 
+}
+
+
+.desc{
+background-color: rgba(255, 255, 255, 0.603);      
+text-align: center;     
+display: inline-block !important;
+color: rgb(0, 0, 0);
+position: absolute;
+left: 30%;
+top: 60px
+}
+
+
+.galeria a:hover .desc{
+ top: 10px;
+ background: gray;
+ color: black;
+ transition: top 0.4s
+}
+
+.galeria{
+transform: scale(1.2); 
+position: relative;
+top: 100px;
+padding: 50px
+}
+
+.galeria a img{
+    border: solid 5px transparent
+}
+
+
+.galeria a img:hover {
+border: solid 5px gray
+    }
+
+.esquerda {
+margin-left: 200px 
+
+}
+
+.direita {
+margin-right: 200px
+}
+
+.map div{
+    position: absolute;
+    top: 100px;
+    left: 250px;
+ 
+}
+
+.map{
+   position: absolute;
+   left: 440px;
+   top: 229px 
+}
+
+
+/*
+* === SLIDESHOW ===
+*/
+
+.slide-controller{
+    
+    box-sizing: border-box;    
+    position: relative;
+    top: 700px;
+    z-index: 1;
+}
+
+input[type="radio"]{ 
+transform: scale(3.5);
+margin: 0 30px;
+}
+
+.slide img{
+    max-width: 1200px;
+    position: relative;
+    z-index: -2;
+}
+
+.slides-list{
+    
+    --total-items: 4;
+    width: calc(var(--total-items) * 100%);
+    position: relative;
+    left: 0%;
+    --selected-item: 0;
+    left: calc(var(--selected-item) * -100%);
+}
+
+.slide-show{
+ overflow: hidden;
+
+}
+.desc-slide{
+    position: relative;
+    margin-bottom: 0px;
+    top: -30%;
+    left: 36%;
+    width: 500px;         
+    background-color: rgba(255, 255, 255, 0.603);      
+}
+
+
+
+  .slide-controller:nth-child(1):checked ~ .slide-show .slides-list{--selected-item: 0;}
+.slide-controller:nth-child(2):checked ~ .slide-show .slides-list{--selected-item: 1;}
+.slide-controller:nth-child(3):checked ~ .slide-show .slides-list{--selected-item: 2;}
+.slide-controller:nth-child(4):checked ~ .slide-show .slides-list{--selected-item: 3;}
